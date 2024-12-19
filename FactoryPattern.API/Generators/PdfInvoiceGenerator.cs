@@ -18,7 +18,7 @@ public class PdfInvoiceGenerator : IInvoiceGenerator
             {
                 page.Size(PageSizes.A4);
                 page.Margin(2, Unit.Centimetre);
-                page.Header().Text("Invoice #${invoice.Id}").SemiBold().FontSize(20);
+                page.Header().Text($"Invoice {invoice.Id}").SemiBold().FontSize(20);
                 page.Content().PaddingVertical(1, Unit.Centimetre).Column(column => 
                 {
                     column.Item().Text($"Date: {invoice.Date:yyyy-MM-dd}");
