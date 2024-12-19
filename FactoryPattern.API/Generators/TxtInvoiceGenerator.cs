@@ -11,7 +11,7 @@ public class TxtInvoiceGenerator : IInvoiceGenerator
         var invoice = MockInvoiceProvider.CreateMockInvoice(invoiceId);
         
         var content = $"Invoice #{invoiceId}\n" +
-                         $"Date: {invoice.Date:yyyy-MM-dd}\n}" +
+                         $"Date: {invoice.Date:yyyy-MM-dd}\n" +
                          $"Customer: {invoice.CustomerName}\n" +
                          $"Amount: ${invoice.Amount:F2}";
         
